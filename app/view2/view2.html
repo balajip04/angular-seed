@@ -1,0 +1,25 @@
+<html>
+
+<head>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+</head>
+
+<body ng-app = "myApp">
+
+<div ng-controller = "myCtrl"><br/><br/><br/>
+  <div style="border-color: black;border: double;margin-left:5%;margin-right: 5%;padding: 5%">
+  <input type = "file" file-model = "myFile" /><br/><br/>
+
+    <select ng-model="image.type" ng-options="state as state.name for state in imageList"></select><br><br>
+  <button ng-click = "uploadFile()">upload Image</button><br/>
+  <div>Phone Number - {{phoneNumber}}</div><br/>
+  <div>Parsed Text - {{parsedText}}</div><br/>
+  <div>License Plate - {{licensePlate}}</div><br/>
+    <img ng-src="data:image/jpeg;base64,{{src}}" id="photo-id"/><br/>
+  </div>
+</div>
+
+
+</body>
+</html>
